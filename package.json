@@ -1,0 +1,23 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "this is a test to set up a node server with http ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truxiced/nodeServer.git"
+  },
+  "author": "Gustav Granelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truxiced/nodeServer/issues"
+  },
+  "homepage": "https://github.com/truxiced/nodeServer#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
