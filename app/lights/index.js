@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.get('/', (req, res) => {  
     hueLightLogic.getLights().then(function(lights){
-        res.send(lights);
+        res.send(lights.lights);
     })
     .done();
 })
