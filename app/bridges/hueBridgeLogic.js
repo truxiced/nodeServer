@@ -1,7 +1,7 @@
-var hue = require("node-hue-api");
+const hue = require('node-hue-api');
 
-function getAvailableBridges () {
+function getAvailableBridges() {
     return hue.nupnpSearch();
 }
 
-module.exports.getAvailableBridges = getAvailableBridges
+module.exports.getAvailableBridges = getAvailableBridges;

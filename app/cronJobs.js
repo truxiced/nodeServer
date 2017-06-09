@@ -1,29 +1,24 @@
 const schedule = require('node-schedule');
-const http = require('http');
 const promise = require('request-promise');
 
 function scheduleFetchDayLight() {
-
-    var rule = new schedule.RecurrenceRule();
+    const rule = new schedule.RecurrenceRule();
     rule.hour = 21;
     rule.minute = 35;
-    //rule.second = 10;
-    rule.dayOfWeek = [new schedule.Range(0, 6)];    
+    // rule.second = 10;
+    rule.dayOfWeek = [new schedule.Range(0, 6)];
 
-    schedule.scheduleJob(rule, function(){
-
-        var promiseOptions = {
+    schedule.scheduleJob(rule, function() {
+        const promiseOptions = {
             url: 'http://api.sunrise-sunset.org/json?lat=' + global.lat + '&lng=' + global.long,
-            json: true
-        }
+            json: true,
+        };
 
         promise(promiseOptions)
-        .then(function (response) {
+        .then(function(response) {
             console.log(response);
-        })
-
+        });
     });
-    
 };
 
-module.exports.scheduleFetchDayLight = scheduleFetchDayLight
+module.exports.scheduleFetchDayLight = scheduleFetchDayLight;
